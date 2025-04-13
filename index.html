@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday chị Bông</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #fff;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    .heart {
+      font-size: 2em;
+      color: red;
+      animation: pulse 1s infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+    .message {
+      font-size: 1.5em;
+      margin-top: 20px;
+      background: rgba(255,255,255,0.2);
+      padding: 20px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+    .cake {
+      margin-top: 40px;
+      font-size: 4em;
+    }
+    .tiktok-embed-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday chị Bông! 🎉</h1>
+  <div class="heart">🎂🍰🧁</div>
+  <div class="message">CHÚC MỪNG SINH NHẬT CHỊ BÔNG</div>
+  <div class="cake">🎈🎉🎁🎊</div>
+
+  <!-- TikTok Embed -->
+  <div class="tiktok-embed-container">
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@dadmackbaker/video/7483282292719340842" data-video-id="7483282292719340842" style="max-width: 605px;min-width: 325px;" >
+      <section>
+        <a target="_blank" title="@dadmackbaker" href="https://www.tiktok.com/@dadmackbaker?refer=embed">@dadmackbaker</a>
+        Time to turn up l, it’s your birthday 🎈🤫👽
+        <a title="mackbaker" target="_blank" href="https://www.tiktok.com/tag/mackbaker?refer=embed">#mackbaker</a>
+        <a title="happybirthday" target="_blank" href="https://www.tiktok.com/tag/happybirthday?refer=embed">#happybirthday</a>
+        <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a>
+        <a title="4u" target="_blank" href="https://www.tiktok.com/tag/4u?refer=embed">#4u</a>
+        <a target="_blank" title="♬ original sound - Mack Baker" href="https://www.tiktok.com/music/original-sound-7483282329000692522?refer=embed">♬ original sound - Mack Baker</a>
+      </section>
+    </blockquote>
+  </div>
+  <script async src="https://www.tiktok.com/embed.js"></script>
+
+  <!-- Confetti effect -->
+  <canvas class="confetti" id="confetti-canvas"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    const duration = 5 * 1000;
+    const end = Date.now() + duration;
+    (function frame() {
+      confetti({
+        particleCount: 4,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 }
+      });
+      confetti({
+        particleCount: 4,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 }
+      });
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  </script>
+</body>
+</html>
